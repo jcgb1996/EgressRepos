@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="~/Content/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style dist/css/adminlte.min.css-->
     <link href="~/dist/custom/Login.css" rel="stylesheet" />
+    <!-- Libreria JqxWidgets -->
+    <link href="~/Content/plugins/jqwidgets/styles/jqx.base.css" rel="stylesheet" />
+    <link href="~/Content/plugins/jqwidgets/styles/jqx.bootstrap.css" rel="stylesheet" />
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
     <div class="wrapper">
@@ -34,17 +37,9 @@
         <!-- /.navbar -->
         <!-- Main Sidebar Container -->
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-
-            <section class="content">
-                <div class="container-fluid">
-                    <!-- /.row -->
-                    <div class="row">
-                        @RenderBody()
-                    </div>
-
-                </div><!--/. container-fluid -->
-            </section>
+        <div class="content-wrapper row p-0 ml-0">
+            @RenderBody()
+            
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
@@ -60,6 +55,8 @@
     <!-- ./wrapper -->
     <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
+
+    <script src="~/Content/plugins/jqwidgets/jqxinput.js"></script>
     <script src="~/Content/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="~/Content/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -75,10 +72,7 @@
     <script src="~/Content/plugins/jquery-mapael/maps/usa_states.min.js"></script>
     <!-- ChartJS -->
     <script src="~/Content/plugins/chart.js/Chart.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    @*<script src="~/dist/js/demo.js"></script>*@
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    @*<script src="~/dist/js/pages/dashboard2.js"></script>*@
+
 </body>
 </html>
 
