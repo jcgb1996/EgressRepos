@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="484" height="440" viewBox="0 0 484 440">
+  <defs>
+    <filter id="LA_" x="0" y="0" width="137" height="102" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="VISIÓN" x="4" y="66" width="392" height="141" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="DE_TUS" x="0" y="172" width="294" height="102" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="GASTOS" x="0" y="241" width="481" height="141" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="EN_TUS_MANOS" x="5" y="355" width="479" height="85" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_2" data-name="Grupo 2" transform="translate(-21 -455)">
+    <g transform="matrix(1, 0, 0, 1, 21, 455)" filter="url(#LA_)">
+      <text id="LA_2" data-name="LA " transform="translate(9 74)" fill="#fff" font-size="75" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">LA </tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 21, 455)" filter="url(#VISIÓN)">
+      <text id="VISIÓN-2" data-name="VISIÓN" transform="translate(14 172)" fill="#fff" font-size="110" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">VISIÓN</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 21, 455)" filter="url(#DE_TUS)">
+      <text id="DE_TUS-2" data-name="DE TUS" transform="translate(9 246)" fill="#fff" font-size="75" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">DE TUS</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 21, 455)" filter="url(#GASTOS)">
+      <text id="GASTOS-2" data-name="GASTOS" transform="translate(9 347)" fill="#fff" font-size="110" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">GASTOS</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 21, 455)" filter="url(#EN_TUS_MANOS)">
+      <text id="EN_TUS_MANOS-2" data-name="EN TUS MANOS" transform="translate(14 415)" fill="#fff" font-size="60" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">EN TUS MANOS</tspan></text>
+    </g>
+  </g>
+</svg>
