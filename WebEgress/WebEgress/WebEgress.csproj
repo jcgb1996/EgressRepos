@@ -120,6 +120,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Login\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Login\LoginAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -158,6 +160,8 @@
     <Content Include="Content\plugins\fontawesome-free\webfonts\fa-brands-400.svg" />
     <Content Include="Content\plugins\fontawesome-free\webfonts\fa-regular-400.svg" />
     <Content Include="Content\plugins\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\plugins\icheck-bootstrap\icheck-bootstrap.css" />
+    <Content Include="Content\plugins\icheck-bootstrap\icheck-bootstrap.min.css" />
     <Content Include="Content\plugins\jquery-mapael\jquery.mapael.js" />
     <Content Include="Content\plugins\jquery-mapael\jquery.mapael.min.js" />
     <Content Include="Content\plugins\jquery-mapael\maps\france_departments.js" />
@@ -676,6 +680,8 @@
     <Content Include="Content\plugins\raphael\raphael.min.js" />
     <Content Include="Content\plugins\raphael\raphael.no-deps.js" />
     <Content Include="Content\plugins\raphael\raphael.no-deps.min.js" />
+    <Content Include="Content\Scripts\LoginScrpts.js" />
+    <Content Include="Content\Site.css" />
     <Content Include="dist\css\adminlte.css" />
     <Content Include="dist\css\adminlte.min.css" />
     <Content Include="dist\css\alt\adminlte.components.css" />
@@ -748,6 +754,8 @@
     <Content Include="Content\plugins\jqwidgets\styles\images\sunny\Thumbs.db" />
     <Content Include="Content\plugins\jqwidgets\styles\images\Thumbs.db" />
     <Content Include="Content\plugins\jqwidgets\styles\Thumbs.db" />
+    <Content Include="Content\plugins\icheck-bootstrap\LICENSE" />
+    <Content Include="Areas\Login\Views\ContraseniaPartial.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -776,6 +784,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Login\Models\" />
+    <Folder Include="Areas\Login\Views\Login\" />
+    <Folder Include="Areas\Login\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
