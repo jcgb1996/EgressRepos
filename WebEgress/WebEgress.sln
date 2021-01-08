@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.28307.1321
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebEgress", "WebEgress\WebEgress.csproj", "{915722FA-FE27-4C12-A36A-F8B15637B3C2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacion", "Aplicacion", "{67D8514D-27A1-403B-BEFA-05432FB452BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Egress.Aplicacion.Contracts", "Aplicacion\Egress.Aplicacion.Contracts\Egress.Aplicacion.Contracts.csproj", "{D7B2A303-5741-4A57-B239-C66DF3D3554C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Egress.Aplicacion.Services", "Aplicacion\Egress.Aplicacion.Services\Egress.Aplicacion.Services.csproj", "{735F8E33-C708-47EB-B062-194CF9BC1940}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +21,21 @@ Global
 		{915722FA-FE27-4C12-A36A-F8B15637B3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{915722FA-FE27-4C12-A36A-F8B15637B3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{915722FA-FE27-4C12-A36A-F8B15637B3C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7B2A303-5741-4A57-B239-C66DF3D3554C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B2A303-5741-4A57-B239-C66DF3D3554C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B2A303-5741-4A57-B239-C66DF3D3554C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B2A303-5741-4A57-B239-C66DF3D3554C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{735F8E33-C708-47EB-B062-194CF9BC1940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{735F8E33-C708-47EB-B062-194CF9BC1940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{735F8E33-C708-47EB-B062-194CF9BC1940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{735F8E33-C708-47EB-B062-194CF9BC1940}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D7B2A303-5741-4A57-B239-C66DF3D3554C} = {67D8514D-27A1-403B-BEFA-05432FB452BC}
+		{735F8E33-C708-47EB-B062-194CF9BC1940} = {67D8514D-27A1-403B-BEFA-05432FB452BC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1FD90DBB-8561-412A-9446-8B9EB717AEEC}

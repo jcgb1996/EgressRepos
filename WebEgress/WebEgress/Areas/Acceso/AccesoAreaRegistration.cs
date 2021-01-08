@@ -1,22 +1,22 @@
 ﻿using System.Web.Mvc;
 
-namespace WebEgress.Areas.Login
+namespace WebEgress.Areas.Acceso
 {
-    public class LoginAreaRegistration : AreaRegistration 
+    public class AccesoAreaRegistration : AreaRegistration 
     {
         public override string AreaName 
         {
             get 
             {
-                return "Login";
+                return "Acceso";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
-                "Login_default",
-                "Login/{controller}/{action}/{id}",
+                "Acceso_default",
+                "Acceso/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
         }

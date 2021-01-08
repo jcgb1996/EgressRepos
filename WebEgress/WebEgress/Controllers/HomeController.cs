@@ -13,11 +13,11 @@ namespace WebEgress.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult CargarLayoutHome()
         {
-            ViewBag.Message = "Your application description page.";
+            //ViewBag.Message = "Your application description page.";
 
-            return View();
+            return View("VistaPrueba");
         }
 
         public ActionResult Contact()

@@ -1,0 +1,26 @@
+﻿
+<div class="input-group mb-3">
+    <input type="password" id="TxtPasswordLog" onkeyup="Login.ValidarTexto();" class="form-control" placeholder="Contraseña">
+    <div class="input-group-append">
+        <div class="input-group-text">
+            <span class="fas fa-lock"></span>
+        </div>
+    </div>
+</div>
+
+<p class="mb-1" style="text-align: center;">
+    Olvidaste tu contraseña
+</p>
+<p class="mb-0" style="text-align: center;">
+    <a href="#" class="text-center">Recuperala aquí</a>
+</p>
+
+<div class="row justify-content-center mt-3">
+
+    <div class="col-5" id="btnFail">
+        <button type="submit" class="btn btn-primary btn-block">Continuar</button>
+    </div>
+    <div class="col-5 btnDisable" id="BtnOk">
+        <button type="submit" onclick="Login.ValidarPassword();" class="btn btn-primary-ok btn-block">Continuar</button>
+    </div>
+</div>

@@ -1,0 +1,114 @@
+﻿.Img-Tamanio-Meses-Egress {
+    width: 70%;
+    height: 70%;
+}
+
+.bg-warning {
+    background-color: #E79F3C !important;
+}
+
+.bg-rose {
+    background-color: #E73CB2 !important;
+}
+
+.bg-lowblue {
+    background-color: #009FDF !important;
+}
+
+.bg-purple {
+    background-color: #9F3CE7 !important;
+}
+
+.bg-orange {
+    background-color: #E77E3C !important;
+}
+
+.bg-green-water {
+    background-color: #3CE7B9 !important;
+}
+
+.bg-lilac {
+    background-color: #3C43E7 !important;
+}
+
+.layout-navbar-fixed .wrapper .content-wrapper {
+    margin-top: calc(3.5rem + -26px);
+}
+
+
+.lowblue-mode {
+    background-color: #EDF0F5;
+    color: #033275;
+}
+
+.dark-mode .content-wrapper {
+    background-color: #EDF0F5;
+    color: #fff;
+}
+
+.content-wrapper {
+    background-color: #EDF0F5;
+}
+
+[class*="sidebar-dark-"] {
+    background-color: #009FDF;
+}
+
+.layout-navbar-fixed .wrapper .sidebar-dark-primary .brand-link:not([class*="navbar"]) {
+    background-color: #033275;
+}
+
+[class*="sidebar-dark-"] .nav-treeview > .nav-item > .nav-link {
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color: #fff;
+}
+
+[class*="sidebar-dark"] .brand-link {
+    border-bottom: 1px solid #009FDF;
+}
+
+.navbar-highblue {
+    background-color: #033275;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(237, 240, 245, 1);
+}
+
+[class*="sidebar-dark-"] .sidebar a {
+    color: #ffffff;
+}
+
+.brand-link {
+    display: block;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: 0.3525rem 0.5rem;
+    transition: width 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.brand-link {
+    height: calc(3.5rem + 1px);
+}
+
+.ImgLogo {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 992px) {
+
+
+    .sidebar-mini.sidebar-collapse .main-sidebar {
+        overflow-x: hidden;
+    }
+
+
+        .sidebar-mini.sidebar-collapse .main-sidebar:hover, .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused {
+            width: 250px;
+        }
+}

@@ -45,16 +45,44 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.4\lib\net46\CommonServiceLocator.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -72,35 +100,38 @@
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
     </Reference>
-    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Optimization">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Abstractions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Abstractions.4.0.3\lib\net46\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Configuration, Version=5.9.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Configuration.5.9.1\lib\net46\Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.9.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Container.5.9.5\lib\net46\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception, Version=5.9.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.5.9.2\lib\net46\Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception.Configuration, Version=5.9.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.Configuration.5.9.2\lib\net46\Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mvc, Version=5.9.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Mvc.5.9.2\lib\net46\Unity.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RegistrationByConvention, Version=5.9.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.RegistrationByConvention.5.9.1\lib\net46\Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ServiceLocation, Version=5.9.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.ServiceLocation.5.9.1\lib\net46\Unity.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -117,11 +148,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Login\Controllers\LoginController.cs" />
-    <Compile Include="Areas\Login\LoginAreaRegistration.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Areas\Acceso\AccesoAreaRegistration.cs" />
+    <Compile Include="Areas\Acceso\Controllers\AccesoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -129,6 +161,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\LayoutHome\abril.svg" />
+    <Content Include="Content\images\LayoutHome\agosto.svg" />
+    <Content Include="Content\images\LayoutHome\diciembre.svg" />
+    <Content Include="Content\images\LayoutHome\enero.svg" />
+    <Content Include="Content\images\LayoutHome\febrero.svg" />
+    <Content Include="Content\images\LayoutHome\julio.svg" />
+    <Content Include="Content\images\LayoutHome\junio.svg" />
+    <Content Include="Content\images\LayoutHome\marzo.svg" />
+    <Content Include="Content\images\LayoutHome\mayo.svg" />
+    <Content Include="Content\images\LayoutHome\noviembre.svg" />
+    <Content Include="Content\images\LayoutHome\octubre.svg" />
+    <Content Include="Content\images\LayoutHome\septiembre.svg" />
     <Content Include="Content\images\login\fondo_inicio.png" />
     <Content Include="Content\images\login\frase.svg" />
     <Content Include="Content\images\login\logo.svg" />
@@ -694,6 +738,7 @@
     <Content Include="dist\css\alt\adminlte.pages.min.css" />
     <Content Include="dist\css\alt\adminlte.plugins.css" />
     <Content Include="dist\css\alt\adminlte.plugins.min.css" />
+    <Content Include="dist\custom\LayoutHome.css" />
     <Content Include="dist\custom\Login.css" />
     <Content Include="dist\js\adminlte.js" />
     <Content Include="dist\js\adminlte.min.js" />
@@ -704,8 +749,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\plugins\bootstrap\js\bootstrap.bundle.js.map" />
     <Content Include="Content\plugins\bootstrap\js\bootstrap.bundle.min.js.map" />
     <Content Include="Content\plugins\bootstrap\js\bootstrap.js.map" />
@@ -755,18 +798,8 @@
     <Content Include="Content\plugins\jqwidgets\styles\images\Thumbs.db" />
     <Content Include="Content\plugins\jqwidgets\styles\Thumbs.db" />
     <Content Include="Content\plugins\icheck-bootstrap\LICENSE" />
-    <Content Include="Areas\Login\Views\ContraseniaPartial.cshtml" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Content\js\jquery-3.5.1.min.js" />
+    <Content Include="unity.config" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -784,9 +817,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Login\Models\" />
-    <Folder Include="Areas\Login\Views\Login\" />
-    <Folder Include="Areas\Login\Views\Shared\" />
+    <Folder Include="Areas\Acceso\Models\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -794,9 +825,24 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\Acceso\Views\web.config" />
+    <Content Include="Areas\Acceso\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Acceso\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Acceso\Views\Acceso\_ContraseniaPartial.cshtml" />
+    <Content Include="Areas\Acceso\Views\Acceso\_UserRegistroPartial.cshtml" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Shared\_LayoutHome.cshtml" />
+    <Content Include="Views\Shared\VistaPrueba.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aplicacion\Egress.Aplicacion.Contracts\Egress.Aplicacion.Contracts.csproj">
+      <Project>{D7B2A303-5741-4A57-B239-C66DF3D3554C}</Project>
+      <Name>Egress.Aplicacion.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aplicacion\Egress.Aplicacion.Services\Egress.Aplicacion.Services.csproj">
+      <Project>{735F8E33-C708-47EB-B062-194CF9BC1940}</Project>
+      <Name>Egress.Aplicacion.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

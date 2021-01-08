@@ -14,11 +14,32 @@
     <!-- Theme style -->
     <link href="~/dist/css/adminlte.css" rel="stylesheet" />
     <link href="~/dist/custom/Login.css" rel="stylesheet" />
+    <!-- jquery -->
+    <script src="~/Content/js/jquery-3.5.1.min.js"></script>
+    <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
 </head>
 <body class="hold-transition login-page">
+
+   
+
     <div class="login-box">
+
         <!-- /.login-logo  card-outline-->
         <div class="card  card-primary">
+
+            <div class="modal fade bd-example-modal-md" data-backdrop="static" data-keyboard="false" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-sm">
+
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-border text-primary-egress" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
             <div class="card-header text-center" style="background-color: #033275; padding: 0px !important;">
                 <div class="col-xl-12">
 
@@ -35,12 +56,14 @@
     </div>
     <!-- /.login Js -->
     <script src="~/Content/Scripts/LoginScrpts.js"></script>
-    <!-- jQuery -->
-    <script src="~/Content/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="~/Content/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="~/dist/js/adminlte.min.js"></script>
+
+
+    <form action="Home/CargarLayoutHome" id="FrmSiguiente" method="post"></form>
+
 </body>
 </html>
 
