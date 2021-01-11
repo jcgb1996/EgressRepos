@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Api.Dominio\Egress.Api.Dominio.Contracts\Egress.Api.Dominio.Contracts.csproj" />
+    <ProjectReference Include="..\..\Api.Infraestructura\Egress.Api.Infraestructura.Implement\Egress.Api.Infraestructura.Implement.csproj" />
+    <ProjectReference Include="..\Egress.Api.Aplicacion.Contracts\Egress.Api.Aplicacion.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
