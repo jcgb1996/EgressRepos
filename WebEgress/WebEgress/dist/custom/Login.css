@@ -1,4 +1,18 @@
-﻿.color-purpura {
+﻿
+.Return {
+    text-align: center;
+    cursor: pointer;
+}
+
+    .Return:hover {
+        background-color: #e6e6e6;
+        background-color: rgba(0,0,0,.1);
+        cursor: pointer;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+.color-purpura {
     color: #007bff;
     font-family: sans-serif;
     font-weight: 100 !important;

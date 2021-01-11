@@ -31,8 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="RestSharp, Version=106.11.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RestSharp.106.11.4\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,12 +47,22 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DTO\LoginServices.cs" />
+    <Compile Include="Services\General\Aes256.cs" />
+    <Compile Include="Services\General\Consultar.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Egress.Aplicacion.Contracts\Egress.Aplicacion.Contracts.csproj">
       <Project>{D7B2A303-5741-4A57-B239-C66DF3D3554C}</Project>
       <Name>Egress.Aplicacion.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Egress.Aplicacion.Entities\Egress.Aplicacion.Entities.csproj">
+      <Project>{7FE8DA10-9C62-4B53-BC0D-9DDC628B4456}</Project>
+      <Name>Egress.Aplicacion.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

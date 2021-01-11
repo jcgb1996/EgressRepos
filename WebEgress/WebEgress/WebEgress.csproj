@@ -154,10 +154,14 @@
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Areas\Acceso\AccesoAreaRegistration.cs" />
     <Compile Include="Areas\Acceso\Controllers\AccesoController.cs" />
+    <Compile Include="Areas\Cliente\ClienteAreaRegistration.cs" />
+    <Compile Include="Areas\Cliente\Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\SesionActiva.cs" />
+    <Compile Include="Helper\SessionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +177,7 @@
     <Content Include="Content\images\LayoutHome\noviembre.svg" />
     <Content Include="Content\images\LayoutHome\octubre.svg" />
     <Content Include="Content\images\LayoutHome\septiembre.svg" />
+    <Content Include="Content\images\login\arrow-back-outline.svg" />
     <Content Include="Content\images\login\fondo_inicio.png" />
     <Content Include="Content\images\login\frase.svg" />
     <Content Include="Content\images\login\logo.svg" />
@@ -818,6 +823,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Acceso\Models\" />
+    <Folder Include="Areas\Cliente\Models\" />
+    <Folder Include="Areas\Cliente\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -830,14 +837,19 @@
     <Content Include="Areas\Acceso\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Acceso\Views\Acceso\_ContraseniaPartial.cshtml" />
     <Content Include="Areas\Acceso\Views\Acceso\_UserRegistroPartial.cshtml" />
+    <Content Include="Areas\Cliente\Views\web.config" />
+    <Content Include="Areas\Cliente\Views\Cliente\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_LayoutHome.cshtml" />
-    <Content Include="Views\Shared\VistaPrueba.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aplicacion\Egress.Aplicacion.Contracts\Egress.Aplicacion.Contracts.csproj">
       <Project>{D7B2A303-5741-4A57-B239-C66DF3D3554C}</Project>
       <Name>Egress.Aplicacion.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aplicacion\Egress.Aplicacion.Entities\Egress.Aplicacion.Entities.csproj">
+      <Project>{7FE8DA10-9C62-4B53-BC0D-9DDC628B4456}</Project>
+      <Name>Egress.Aplicacion.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Aplicacion\Egress.Aplicacion.Services\Egress.Aplicacion.Services.csproj">
       <Project>{735F8E33-C708-47EB-B062-194CF9BC1940}</Project>
