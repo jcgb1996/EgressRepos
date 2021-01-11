@@ -1,11 +1,26 @@
-﻿
+﻿@model string 
+
+<div class="row justify-content-center mb-3">
+
+    <div class="col-1 p-0 Return"  onclick="Login.ViewLoginRegistro();">
+        <img src="~/Content/images/login/arrow-back-outline.svg" style="width: 80%;height: 80%;" />
+    </div>
+
+    <div class="col-10 p-0">
+        <label class="color-purpura m-0" id="LblUserLogin">@Model</label>
+    </div>    <!-- /.col -->
+</div>
+
 <div class="input-group mb-3">
-    <input type="password" id="TxtPasswordLog" onkeyup="Login.ValidarTexto();" class="form-control" placeholder="Contraseña">
+    <input type="password" id="TxtPasswordLog" onkeyup="Login.ValidarTexto('Va');" class="form-control" placeholder="Contraseña">
     <div class="input-group-append">
         <div class="input-group-text">
-            <span class="fas fa-lock"></span>
+            <span class="fas fa-lock">
+            </span>
         </div>
     </div>
+
+
 </div>
 
 <p class="mb-1" style="text-align: center;">
