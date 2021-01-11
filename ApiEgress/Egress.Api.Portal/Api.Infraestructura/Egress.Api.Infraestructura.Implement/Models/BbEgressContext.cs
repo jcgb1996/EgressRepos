@@ -16,37 +16,42 @@ namespace Egress.Api.Infraestructura.Implement.Models
         {
         }
 
-        public virtual DbSet<EgressDetUsuario> EgressDetUsuario { get; set; }
+        public virtual DbSet<DetEgressUsuario> DetEgressUsuario { get; set; }
         public virtual DbSet<EgressUsuario> EgressUsuario { get; set; }
+        public virtual DbSet<JwtEgress> JwtEgress { get; set; }
+        public virtual DbSet<Parametros> Parametros { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                   #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=LAPTOP-3REL3TOL\\SQLEXPRESS;Database=BbEgress;User ID=sa;Password=Egress.c0m.10.2021;");
+
+                var builder = new ConfigurationBuilder().AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+                var configuration = builder.Build();
+                var PathConnectionString = configuration["ConnectionStrings:BloggingDatabase"];
+                optionsBuilder.UseSqlServer(PathConnectionString);
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<EgressDetUsuario>(entity =>
+            modelBuilder.Entity<DetEgressUsuario>(entity =>
             {
-                entity.HasNoKey();
+                entity.ToTable("Det_EgressUsuario");
 
                 entity.Property(e => e.Apellidos)
                     .IsRequired()
-                    .HasMaxLength(300)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Correo)
+                    .IsRequired()
+                    .HasMaxLength(200)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Nombres)
                     .IsRequired()
-                    .HasMaxLength(300)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Passwors)
-                    .IsRequired()
-                    .HasMaxLength(300)
+                    .HasMaxLength(100)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Usuario)
@@ -55,10 +60,10 @@ namespace Egress.Api.Infraestructura.Implement.Models
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.UsuarioNavigation)
-                    .WithMany()
+                    .WithMany(p => p.DetEgressUsuario)
                     .HasForeignKey(d => d.Usuario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_EgressDetUsuario_EgressUsuario");
+                    .HasConstraintName("FK_Det_EgressUsuario_EgressUsuario");
             });
 
             modelBuilder.Entity<EgressUsuario>(entity =>
@@ -74,6 +79,42 @@ namespace Egress.Api.Infraestructura.Implement.Models
                     .IsRequired()
                     .HasMaxLength(1)
                     .IsUnicode(false);
+
+                entity.Property(e => e.Password)
+                    .IsRequired()
+                    .HasMaxLength(300)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<JwtEgress>(entity =>
+            {
+                entity.ToTable("Jwt_Egress");
+
+                entity.Property(e => e.Token)
+                    .IsRequired()
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Usuario)
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.UsuarioNavigation)
+                    .WithMany(p => p.JwtEgress)
+                    .HasForeignKey(d => d.Usuario)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Jwt_Egress_EgressUsuario");
+            });
+
+            modelBuilder.Entity<Parametros>(entity =>
+            {
+                entity.HasKey(e => e.Codigo);
+
+                entity.Property(e => e.Codigo)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Valor).IsUnicode(false);
             });
 
             OnModelCreatingPartial(modelBuilder);

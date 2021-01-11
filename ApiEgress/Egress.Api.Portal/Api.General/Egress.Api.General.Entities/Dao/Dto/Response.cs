@@ -8,6 +8,7 @@ namespace Egress.Api.General.Entities.Dao.Dto
     {
         public string CodigoError { get; set; }
         public string Mensaje { get; set; }
-
+        public string Value { get; set; }
+        public bool Exito { get; set; }
     }
 }

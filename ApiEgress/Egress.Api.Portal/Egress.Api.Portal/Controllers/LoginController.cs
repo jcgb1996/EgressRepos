@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Egress.Api.Aplicacion.Contracts.Interfaces.Dto;
+using Egress.Api.General.Entities.Dao.Dto;
+using Egress.Api.General.Entities.Dao.Dto.Acceso.Request;
 using Egress.Api.General.Entities.Dao.Dto.Acceso.Response;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -28,7 +30,7 @@ namespace Egress.Api.Portal.Controllers
         #endregion
 
         // GET api/values
-        [HttpPost("ValidaUsuario")]
+        [HttpGet("ValidaUsuario")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -37,12 +39,48 @@ namespace Egress.Api.Portal.Controllers
         {
             return await Task.Run(() =>
             {
-                var ValidaUsuario =  _mapeoValidarAcceso.ValidarUsuario(value);
+                var ValidaUsuario = _mapeoValidarAcceso.ValidarUsuario(value);
                 _mapeoValidarAcceso.Dispose();
                 return ValidaUsuario;
             });
-           
+
         }
+
+
+        [HttpGet("ValidaPassword")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<Response>> ValidaPassword(string Usuario, string Password)
+        {
+            return await Task.Run(() =>
+            {
+                var ValidaUsuario = _mapeoValidarAcceso.ValidarPassword(Usuario, Password);
+                _mapeoValidarAcceso.Dispose();
+                return ValidaUsuario;
+            });
+
+        }
+
+
+        // GET api/values
+        [HttpPost("RegistrarUsuario")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<Response>> RegistrarUsuario([FromBody]RegistrarUsuarioResponse Usuario)
+        {
+            return await Task.Run(() =>
+            {
+                var Response = _mapeoValidarAcceso.RegistrarUsuario(Usuario);
+                _mapeoValidarAcceso.Dispose();
+                return Response;
+            });
+
+        }
+
 
         // GET api/values/5
         [HttpGet("{id}")]

@@ -1,6 +1,5 @@
 ﻿using Egress.Api.Aplicacion.Contracts.Interfaces.Dto;
 using Egress.Api.Dominio.Contracts.Interfaces.Dto;
-using Egress.Api.General.Entities.Dao.Dto;
 using Egress.Api.General.Entities.Dao.Dto.Acceso.Request;
 using Egress.Api.General.Entities.Dao.Dto.Acceso.Response;
 using Egress.Api.Infraestructura.Implement.Services.Dto;
@@ -10,35 +9,33 @@ using System.Text;
 
 namespace Egress.Api.Aplicacion.Implement.Services.Dto
 {
-    public class ValidarAcceso : IvalidarAcceso
+    public class JwtSeguridad : IJwtSeguridad
     {
+        #region Variables
         private bool _disposed = false;
-        IdValidarAcceso _IDValidarAcceso = new InfValidarAcceso();
+        IdJwtSeguridad _IDValidarAcceso = new InfJwtSeguridad();
+        #endregion
 
         #region Metodos
-
-        public ValidaUsuarioResponse ValidarUsuario(string Usuario)
+        public string ConsultarParametrosJwt(string Parametro)
         {
-            var validaUsuarioResponse = _IDValidarAcceso.ValidarUsuario(Usuario);
+            var Result = _IDValidarAcceso.ConsultarParametrosJwt(Parametro);
             _IDValidarAcceso.Dispose();
-            return validaUsuarioResponse;
+            return Result;
         }
 
-        public Response ValidarPassword(string Usuario, string Password)
+        public JwtTokenResponse GenerarValidarToken(GenerarTokenRequest generarTokenRequest)
         {
-            var validaUsuarioResponse = _IDValidarAcceso.ValidarPassword(Usuario,Password);
-            _IDValidarAcceso.Dispose();
-            return validaUsuarioResponse;
-        }
 
-        public Response RegistrarUsuario(RegistrarUsuarioResponse Usuario)
-        {
-            var validaUsuarioResponse = _IDValidarAcceso.RegistrarUsuario(Usuario);
+             var Result = _IDValidarAcceso.GenerarValidarToken(generarTokenRequest);
             _IDValidarAcceso.Dispose();
-            return validaUsuarioResponse;
+            return Result;
+
         }
 
         #endregion
+
+
 
 
         #region IDisposable
@@ -61,7 +58,7 @@ namespace Egress.Api.Aplicacion.Implement.Services.Dto
             GC.SuppressFinalize(this);
         }
 
-        ~ValidarAcceso()
+        ~JwtSeguridad()
         {
             Dispose(false);
         }
