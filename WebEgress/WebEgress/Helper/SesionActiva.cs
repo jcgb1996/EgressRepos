@@ -9,11 +9,6 @@ namespace WebEgress.Helper
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-
-
-
-
-
             if (!SessionHelper.ValidarSesionActiva())
             {
                 SessionHelper.EliminarTodasLasSesion();
@@ -26,7 +21,7 @@ namespace WebEgress.Helper
                 }
                 else
                 {
-                    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
+                    filterContext.Result  = new RedirectToRouteResult(new RouteValueDictionary(new
                     {
                         area = "",
                         controller = "Home",
@@ -34,10 +29,25 @@ namespace WebEgress.Helper
                     }));
                 }
             }
-
             base.OnActionExecuting(filterContext);
-
         }
 
+    }
+
+    public class NoLoginAttribute : ActionFilterAttribute
+    {
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            base.OnActionExecuting(filterContext);
+
+            if (SessionHelper.ValidarSesionActiva())
+            {
+                filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
+                {
+                    controller = "Cliente/Cliente",
+                    action = "IndexValidaSession"
+                }));
+            }
+        }
     }
 }

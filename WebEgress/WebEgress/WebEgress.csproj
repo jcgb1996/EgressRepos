@@ -729,6 +729,7 @@
     <Content Include="Content\plugins\raphael\raphael.min.js" />
     <Content Include="Content\plugins\raphael\raphael.no-deps.js" />
     <Content Include="Content\plugins\raphael\raphael.no-deps.min.js" />
+    <Content Include="Content\Scripts\LayoutHome.js" />
     <Content Include="Content\Scripts\LoginScrpts.js" />
     <Content Include="Content\Site.css" />
     <Content Include="dist\css\adminlte.css" />

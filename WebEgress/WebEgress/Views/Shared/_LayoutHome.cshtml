@@ -17,8 +17,10 @@
     @*<link href="~/dist/css/adminlte.min.css" rel="stylesheet" />*@
     @*<link rel="stylesheet" href="dist/css/adminlte.min.css">*@
     <link href="~/dist/custom/LayoutHome.css" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="~/Content/js/jquery-3.5.1.min.js"></script>
 </head>
-<body class="sidebar-mini layout-footer-fixed control-sidebar-slide-open layout-navbar-fixed layout-fixed sidebar-collapse lowblue-mode">
+<body onload="Home.SinRegreso();" onpageshow="if (event.persisted) Home.SinRegreso();" onunload="" class="sidebar-mini layout-footer-fixed control-sidebar-slide-open layout-navbar-fixed layout-fixed sidebar-collapse lowblue-mode">
     <div class="wrapper">
         @RenderBody()
         <!-- Navbar -->
@@ -871,8 +873,8 @@
                         <!-- /.col -->
                         <div class="col-12 col-sm-6 col-md-3 mb-4">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-warning elevation-1">                                   
-                                    <img src="~/Content/images/LayoutHome/febrero.svg" class="Img-Tamanio-Meses-Egress"  />
+                                <span class="info-box-icon bg-warning elevation-1">
+                                    <img src="~/Content/images/LayoutHome/febrero.svg" class="Img-Tamanio-Meses-Egress" />
                                 </span>
                                 <div class="info-box-content">
                                     <span class="info-box-text">Valor presupuestado</span>
@@ -887,7 +889,7 @@
                         <div class="col-12 col-sm-6 col-md-3 mb-4">
                             <div class="info-box mb-3">
                                 <span class="info-box-icon bg-success elevation-1">
-                                    <img src="~/Content/images/LayoutHome/marzo.svg"  class="Img-Tamanio-Meses-Egress" />
+                                    <img src="~/Content/images/LayoutHome/marzo.svg" class="Img-Tamanio-Meses-Egress" />
                                 </span>
                                 <div class="info-box-content">
                                     <span class="info-box-text">Valor presupuestado</span>
@@ -961,7 +963,7 @@
                         <div class="col-12 col-sm-6 col-md-3 mb-4">
                             <div class="info-box mb-3">
                                 <span class="info-box-icon bg-green-water elevation-1">
-                                    <img src="~/Content/images/LayoutHome/agosto.svg" class="Img-Tamanio-Meses-Egress"  />
+                                    <img src="~/Content/images/LayoutHome/agosto.svg" class="Img-Tamanio-Meses-Egress" />
                                 </span>
                                 <div class="info-box-content">
                                     <span class="info-box-text">Valor presupuestado</span>
@@ -993,7 +995,7 @@
                         <div class="col-12 col-sm-6 col-md-3 mb-4">
                             <div class="info-box mb-3">
                                 <span class="info-box-icon bg-success elevation-1">
-                                    <img src="~/Content/images/LayoutHome/octubre.svg" class="Img-Tamanio-Meses-Egress"/>
+                                    <img src="~/Content/images/LayoutHome/octubre.svg" class="Img-Tamanio-Meses-Egress" />
                                 </span>
                                 <div class="info-box-content">
                                     <span class="info-box-text">Valor presupuestado</span>
@@ -1008,7 +1010,7 @@
                         <div class="col-12 col-sm-6 col-md-3 mb-4">
                             <div class="info-box mb-3">
                                 <span class="info-box-icon bg-rose elevation-1">
-                                    <img src="~/Content/images/LayoutHome/noviembre.svg"  class="Img-Tamanio-Meses-Egress"/>
+                                    <img src="~/Content/images/LayoutHome/noviembre.svg" class="Img-Tamanio-Meses-Egress" />
                                 </span>
                                 <div class="info-box-content">
                                     <span class="info-box-text">Valor presupuestado</span>
@@ -1057,8 +1059,6 @@
     </div>
     <!-- ./wrapper -->
     <!-- REQUIRED SCRIPTS -->
-    <!-- jQuery -->
-    <script src="~/Content/js/jquery-3.5.1.min.js"></script>
     @*<script src="plugins/jquery/jquery.min.js"></script>*@
     <!-- Bootstrap -->
     <script src="~/Content/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1083,6 +1083,7 @@
     @*<script src="plugins/chart.js/Chart.min.js"></script>*@
     <script src="~/Content/plugins/chart.js/Chart.min.js"></script>
     <!-- AdminLTE for demo purposes -->
+    <script src="~/Content/Scripts/LayoutHome.js"></script>
     @*<script src="~/dist/js/demo.js"></script>*@
     @*<script src="dist/js/demo.js"></script>*@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
