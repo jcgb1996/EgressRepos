@@ -1,9 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
+using System.Text;
 using Egress.Api.Aplicacion.Contracts.Interfaces.Dto;
 using Egress.Api.Aplicacion.Implement.Services.Dto;
+using Egress.Api.General.Entities.Jwt.Dto;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -27,6 +28,22 @@ namespace Egress.Api.Portal
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            IJwtSeguridad _IJwtSeguridad = new JwtSeguridad();
+            var DatosJwtParametros = _IJwtSeguridad.ConsultarParametrosJwt("PasswordJWT");
+            var key = Encoding.UTF8.GetBytes(DatosJwtParametros);
+
+            Auth auth = new Auth(key);
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options => auth.ValidateJwt(options));
+
+            services.AddAuthorization(auth => auth
+                .AddPolicy("Bearer", new AuthorizationPolicyBuilder()
+                .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+                .RequireAuthenticatedUser().Build())
+            );
+
             services.AddControllers();
 
             services.AddSwaggerGen(c =>
@@ -45,6 +62,7 @@ namespace Egress.Api.Portal
             });
 
             services.AddTransient<IvalidarAcceso, ValidarAcceso>();
+            services.AddTransient<IJwtSeguridad, JwtSeguridad>();
 
         }
 
