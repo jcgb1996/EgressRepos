@@ -18,6 +18,13 @@ namespace WebEgress.Areas.Cliente.Controllers
             return View("Index");
         }
 
+        //public RedirectToRouteResult IndexReturn()
+        //{
+        //    return RedirectToAction("Index", "Cliente");
+        //
+        //}
+
+
         public RedirectToRouteResult CerrarSesion()
         {
             SessionHelper.EliminarTodasLasSesion();

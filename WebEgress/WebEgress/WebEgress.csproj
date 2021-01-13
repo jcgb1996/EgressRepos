@@ -729,7 +729,6 @@
     <Content Include="Content\plugins\raphael\raphael.min.js" />
     <Content Include="Content\plugins\raphael\raphael.no-deps.js" />
     <Content Include="Content\plugins\raphael\raphael.no-deps.min.js" />
-    <Content Include="Content\Scripts\LayoutHome.js" />
     <Content Include="Content\Scripts\LoginScrpts.js" />
     <Content Include="Content\Site.css" />
     <Content Include="dist\css\adminlte.css" />
@@ -806,7 +805,9 @@
     <Content Include="Content\plugins\icheck-bootstrap\LICENSE" />
     <Content Include="Content\js\jquery-3.5.1.min.js" />
     <Content Include="unity.config" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -842,6 +843,7 @@
     <Content Include="Areas\Cliente\Views\Cliente\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\_LayoutHome.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aplicacion\Egress.Aplicacion.Contracts\Egress.Aplicacion.Contracts.csproj">

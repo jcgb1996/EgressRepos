@@ -42,11 +42,24 @@ namespace WebEgress.Helper
 
             if (SessionHelper.ValidarSesionActiva())
             {
-                filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
-                {
-                    controller = "Cliente/Cliente",
-                    action = "IndexValidaSession"
-                }));
+
+                //if (filterContext.Controller is WebEgress.Areas.Acceso.Controllers.AccesoController)
+                //{
+                //    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
+                //    {
+                //        controller = "../Cliente/Cliente",
+                //        action = "IndexReturn"
+                //    }));
+                //}
+                //else
+                //{
+                    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
+                    {
+                        controller = "Cliente/Cliente",
+                        action = "IndexValidaSession"
+                    }));
+                //}
+                
             }
         }
     }

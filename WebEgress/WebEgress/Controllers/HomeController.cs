@@ -7,6 +7,7 @@ using WebEgress.Helper;
 
 namespace WebEgress.Controllers
 {
+    //[SesionActiva]
     [NoLogin]
     public class HomeController : Controller
     {

@@ -9,10 +9,10 @@ using WebEgress.Helper;
 
 namespace WebEgress.Areas.Acceso.Controllers
 {
+    //[NoLogin]
     public class AccesoController : Controller
     {
-
-        [HttpPost]
+        
         public async Task<JsonResult> ValidaUsuario(string Usuario)
         {
             return await Task.Run(async () =>
@@ -75,9 +75,19 @@ namespace WebEgress.Areas.Acceso.Controllers
         //    // return PartialView("_UserRegistroPartial");
         //}
 
-        public PartialViewResult ViewLoginRegistro()
+        public ActionResult ViewLoginRegistro()
         {
+            //var Session = SessionHelper.ValidarSesionActiva();
+            //if (Session)
+            //{
+
+            //    return RedirectToAction("Cliente", "Index");
+            //}
+            //else
+            //{
+
             return PartialView("_UserRegistroPartial");
+            //}
         }
 
     }
