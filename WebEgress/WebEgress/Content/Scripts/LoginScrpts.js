@@ -181,6 +181,7 @@
 
 			},
 			error: function (xhr, status, error) {
+				document.getElementById("FrmSiguiente").submit();
 				var errorr = error
 			}
 		});

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using WebEgress.Helper;
 
 namespace WebEgress.Areas.Cliente.Controllers
@@ -15,6 +11,25 @@ namespace WebEgress.Areas.Cliente.Controllers
             string Usuario = formCollection["TxtUserFrm"];
             return View();
         }
-        
+
+        public ActionResult IndexValidaSession()
+        {
+            // string Usuario = formCollection["TxtUserFrm"];
+            return View("Index");
+        }
+
+        //public RedirectToRouteResult IndexReturn()
+        //{
+        //    return RedirectToAction("Index", "Cliente");
+        //
+        //}
+
+
+        public RedirectToRouteResult CerrarSesion()
+        {
+            SessionHelper.EliminarTodasLasSesion();
+            return RedirectToAction("../../Home", "Index");
+
+        }
     }
 }
