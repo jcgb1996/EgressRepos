@@ -47,7 +47,7 @@ namespace Egress.Api.Portal.Controllers
         }
 
 
-        [HttpGet("ValidaPassword")]
+        [HttpPost("Login")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

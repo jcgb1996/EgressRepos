@@ -34,7 +34,7 @@ namespace Egress.Api.Infraestructura.Implement.Services.General
         {
             string TextoPlano = string.Empty;
             ConsultarParametros Parametros = new ConsultarParametros();
-            UsuarioRegistro usuarioRegistro = new UsuarioRegistro();
+            Usuario usuarioRegistro = new Usuario();
             string UsuarioDato = usuarioRegistro.ConsultarPasswordUsuario(Usuario);
             var UsuarioByte = ObtenerByteDeLosDatos(UsuarioDato);
             byte[] Key = Encoding.ASCII.GetBytes(Parametros.ConsultarParametrosPorCodigo("LlaveAES"));

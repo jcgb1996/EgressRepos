@@ -15,16 +15,17 @@ namespace Egress.Api.Infraestructura.Implement.Services.Dto
     {
         #region Variables 
         private bool _disposed = false;
-        private ValidaUsuarioResponse validaUsuarioResponse;
-        private UsuarioRegistro usuarioRegistro;
+        private static ValidaUsuarioResponse validaUsuarioResponse;
+        private static Usuario usuarioRegistro;
         #endregion
 
         #region Constructor
         public InfValidarAcceso()
         {
             validaUsuarioResponse = new ValidaUsuarioResponse();
-            usuarioRegistro = new UsuarioRegistro();
+            usuarioRegistro = new Usuario();
         }
+
         #endregion
 
         #region Metodos
@@ -90,17 +91,31 @@ namespace Egress.Api.Infraestructura.Implement.Services.Dto
             Aes256 aes256 = new Aes256();
             try
             {
-               
-                string PasswordUser = usuarioRegistro.ConsultarPasswordUsuario(Usuario);
-                if (Password.Equals(PasswordUser))
+                bool ExisteUsuario = usuarioRegistro.ValidaUsuarioExistente(Usuario);
+                if (ExisteUsuario)
                 {
-                    response = new Response()
+                    Password = aes256.JwtEncriptarPassword(Password);
+                    string PasswordUser = usuarioRegistro.ConsultarPasswordUsuario(Usuario);
+                    if (Password.Equals(PasswordUser))
                     {
-                        CodigoError = "200",
-                        Exito = true,
-                        Mensaje = "Contraseña correcta",
-                        Value = "",
-                    };
+                        response = new Response()
+                        {
+                            CodigoError = "200",
+                            Exito = true,
+                            Mensaje = "Contraseña correcta",
+                            Value = "",
+                        };
+                    }
+                    else
+                    {
+                        response = new Response()
+                        {
+                            CodigoError = "200",
+                            Exito = false,
+                            Mensaje = "Usuario o Contraseña incorrecta",
+                            Value = "",
+                        };
+                    }
                 }
                 else
                 {
@@ -108,10 +123,11 @@ namespace Egress.Api.Infraestructura.Implement.Services.Dto
                     {
                         CodigoError = "200",
                         Exito = false,
-                        Mensaje = "Contraseña incorrecta",
+                        Mensaje = "Usuario o Contraseña incorrecta",
                         Value = "",
                     };
                 }
+               
             }
             catch (Exception ex)
             {
@@ -163,6 +179,10 @@ namespace Egress.Api.Infraestructura.Implement.Services.Dto
             return response;
         }
 
+        public Response LoginFacebook(string Token)
+        {
+            return new Response();
+        }
 
         #endregion
 

@@ -17,7 +17,7 @@ namespace Egress.Api.Infraestructura.Implement.Services.Dto
 
         #region Variables
         ConsultarParametros consultarParametros;
-        UsuarioRegistro usuarioRegistro;
+        Usuario usuarioRegistro;
         private bool _disposed = false;
         #endregion
 
@@ -25,7 +25,7 @@ namespace Egress.Api.Infraestructura.Implement.Services.Dto
         public InfJwtSeguridad()
         {
             consultarParametros = new ConsultarParametros();
-            usuarioRegistro = new UsuarioRegistro();
+            usuarioRegistro = new Usuario();
         }
 
         #endregion
